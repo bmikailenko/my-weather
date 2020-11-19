@@ -1,0 +1,17 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  min-height: 10vh;
+  background: rgba(122, 130, 136, 0.2)!important;
+  color: rgba(255, 255, 255, 0.8)!important;
+}
+
+.nav-links {
+  display: flex;
+  
+  justify-content: space-around;
+  list-style: none;
+  padding: 15px;
+}
+
+

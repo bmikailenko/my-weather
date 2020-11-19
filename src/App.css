@@ -1,38 +1,78 @@
 .App {
   text-align: center;
+  height: 100%
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+ }
+ 
+html{
+  width: 100vw;
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background-image: url(/images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; 
+ }
+
+ body > #root > div {
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.transparent {
+  background: rgba(122, 130, 136, 0.6)!important;
 }
 
-.App-link {
-  color: #61dafb;
+.center-div{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 25vh;
+  left: 0;
+  width: 500px;
+  height: 200px;
+  border-radius: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center-div-dashboard{
+  background: rgba(122, 130, 136, 0.6)!important;
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  border-radius: 1px;
+}
+
+.center-div-profile{
+  height: 300px;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.8)!important;
+  padding-bottom: 10px;
+}
+
+.block {
+  margin: auto;
+  top: 20px;
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+.align-right {
+  float: right;
 }

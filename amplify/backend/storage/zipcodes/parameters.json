@@ -1,0 +1,5 @@
+{
+    "tableName": "zipcodes",
+    "partitionKeyName": "user",
+    "partitionKeyType": "S"
+}
