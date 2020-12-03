@@ -13,6 +13,7 @@ function Dashboard() {
   var [zipcode, setZipcode] = useState(); 
 
   useEffect(() => {
+
     const getUserZipcode = async () => {
       if (zipcode) {
         return zipcode;
@@ -26,18 +27,33 @@ function Dashboard() {
         return 98662;
       }
     }
+
     const fetchForecast = async () => {
       const currentZipcode = await getUserZipcode();
+
+      const error = {
+        'name': 'The forecast for ' + currentZipcode + ' is currently unavalible',
+        'icon': '/images/sad.png'
+      }
+
       const coordinates = await Zipcodes.lookup(currentZipcode);
-      const stationData = await fetch('/points/' + coordinates.latitude + ',' + coordinates.longitude);
-      const station = await stationData.json();
-      const gridId = await station.properties.gridId;
-      const gridX = await station.properties.gridX;
-      const gridY = await station.properties.gridY;
-      const forecastData = await fetch('/gridpoints/' + gridId + '/' + gridX + ',' + gridY + '/forecast');
-      const forecast = await forecastData.json();
-      console.log(forecast.properties.periods);
-      setItems(forecast.properties.periods);
+
+      if (coordinates !== undefined) {
+        const stationData = await fetch('https://api.weather.gov/points/' + coordinates.latitude + ',' + coordinates.longitude, { "User-Agent" : ('my-weather','bmikailenko@gmail.com') })
+        const station = await stationData.json();
+        const gridId = await station.properties.gridId;
+        const gridX = await station.properties.gridX;
+        const gridY = await station.properties.gridY;
+        const forecastData = await fetch('https://api.weather.gov/gridpoints/' + gridId + '/' + gridX + ',' + gridY + '/forecast', { "User-Agent"   : ('my-weather','bmikailenko@gmail.com') });
+        const forecast = await forecastData.json();
+        if (forecast.properties !== undefined) {
+          setItems(forecast.properties.periods);
+        } else {
+          setItems([error]);
+        }  
+      } else {
+        setItems([error]);
+      }  
     }
     fetchForecast();
   },[zipcode]);
@@ -49,7 +65,7 @@ function Dashboard() {
       setZipcode(zipcode.zipcode);
       return zipcode;
     } catch (e) {
-      console.log(e);
+      console.log('You dont have a zipcode with us yet!');
     }
   }
 
@@ -64,8 +80,21 @@ function Dashboard() {
 
       <div className="center-div center-div-dashboard transparent p-5 rounded shadow">
 
-        <h1>Forecast for: {zipcode}</h1>
-  
+        {(items[0]) ? (
+          <>
+             <h1>{items[0].temperature}°F</h1>
+             <img src={items[0].icon} alt={items[0].shortForecast} />
+             <p>
+               {items[0].detailedForecast}
+            </p>
+          </>
+        ) :
+          <>
+            Loading data...
+          </>
+        }
+
+
         <Table responsive className="transparent" variant="dark">
         <thead> 
           <tr className="transparent" key="forecast-data">
@@ -95,6 +124,11 @@ function Dashboard() {
         </tbody>
         </Table>
 
+        <div style={{position: "relative", right:"60vh", color: "rgba(255, 255, 255, 0.8)"}}>
+          {(zipcode) ? (zipcode) : (98662)}
+        </div>
+
+        
         <Form onSubmit={handleSubmit} autoComplete="off">
           <Form.Group controlId="formBasicZipcode">
             <Form.Row className="align-right">

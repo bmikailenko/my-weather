@@ -23,7 +23,7 @@ function Profile() {
       if (userZipcode) {
         setZipcode(userZipcode)
       } else {
-        setZipcode('You dont have one yet!');
+        setZipcode(null);
       }
     }
     getUserZipcode();
@@ -34,7 +34,7 @@ function Profile() {
       const user = await Auth.currentUserInfo();
       const sub = await user.attributes.sub;
       const graphqlEntry = { 'id': sub, 'zipcode': newZipcode };
-      if (zipcode === 'You dont have one yet!') {
+      if (zipcode === null) {
         await API.graphql(graphqlOperation(createZipcode, {input: graphqlEntry}));
       } else {
         await API.graphql(graphqlOperation(updateZipcode, {input: graphqlEntry}));
@@ -60,7 +60,7 @@ function Profile() {
 
         <h1>Profile</h1>
 
-        <h6> Your current zipcode is: {zipcode}</h6>
+        <h6> {(zipcode) ? ("Your current zipcode is:" + zipcode) : (null)}</h6>
 
         <Form onSubmit={handleSubmit}>
           <Form.Group controlId="formBasicZipcode">
