@@ -3,21 +3,21 @@
 
 const awsmobile = {
     "aws_project_region": "us-east-2",
-    "aws_cognito_identity_pool_id": "us-east-2:cc8cdca1-e2bb-425d-98cf-2aaeefaea339",
+    "aws_cognito_identity_pool_id": "us-east-2:4ff7bed1-4cec-4efa-82e8-819cbc3d1d0d",
     "aws_cognito_region": "us-east-2",
-    "aws_user_pools_id": "us-east-2_U4wslJ0MK",
-    "aws_user_pools_web_client_id": "1or2the9uu9ch71nv3lbu1gg0a",
+    "aws_user_pools_id": "us-east-2_zxR6SkxiZ",
+    "aws_user_pools_web_client_id": "3gh8l65h9ou94haiae1792sn2a",
     "oauth": {},
+    "aws_appsync_graphqlEndpoint": "https://ztr5zxfuerhwhb5p3celoaqsiu.appsync-api.us-east-2.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-2",
+    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS",
     "aws_dynamodb_all_tables_region": "us-east-2",
     "aws_dynamodb_table_schemas": [
         {
-            "tableName": "zipcodes-dev",
+            "tableName": "zipcodes-myweather",
             "region": "us-east-2"
         }
-    ],
-    "aws_appsync_graphqlEndpoint": "https://aak4vv7w5jdkpnixumtmufvwd4.appsync-api.us-east-2.amazonaws.com/graphql",
-    "aws_appsync_region": "us-east-2",
-    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS"
+    ]
 };
 
 

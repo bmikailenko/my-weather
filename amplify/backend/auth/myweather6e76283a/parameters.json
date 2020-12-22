@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "myweather681fb6e9_identitypool_681fb6e9",
+    "identityPoolName": "myweather6e76283a_identitypool_6e76283a",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "myweat681fb6e9",
-    "userPoolName": "myweather681fb6e9_userpool_681fb6e9",
+    "resourceNameTruncated": "myweat6e76283a",
+    "userPoolName": "myweather6e76283a_userpool_6e76283a",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -28,10 +28,10 @@
     "userpoolClientReadAttributes": [
         "email"
     ],
-    "userpoolClientLambdaRole": "myweat681fb6e9_userpoolclient_lambda_role",
+    "userpoolClientLambdaRole": "myweat6e76283a_userpoolclient_lambda_role",
     "userpoolClientSetAttributes": false,
-    "sharedId": "681fb6e9",
-    "resourceName": "myweather681fb6e9",
+    "sharedId": "6e76283a",
+    "resourceName": "myweather6e76283a",
     "authSelections": "identityPoolAndUserPool",
     "authRoleArn": {
         "Fn::GetAtt": [

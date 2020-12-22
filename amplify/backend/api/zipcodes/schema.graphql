@@ -1,0 +1,4 @@
+type Zipcode @model {
+  id: ID!
+  zipcode: String
+}

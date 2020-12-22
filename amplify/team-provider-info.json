@@ -1,19 +1,19 @@
 {
     "dev": {
         "awscloudformation": {
-            "AuthRoleName": "amplify-myweather-dev-211540-authRole",
-            "UnauthRoleArn": "arn:aws:iam::519468673194:role/amplify-myweather-dev-211540-unauthRole",
-            "AuthRoleArn": "arn:aws:iam::519468673194:role/amplify-myweather-dev-211540-authRole",
+            "AuthRoleName": "amplify-myweather-dev-184121-authRole",
+            "UnauthRoleArn": "arn:aws:iam::519468673194:role/amplify-myweather-dev-184121-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::519468673194:role/amplify-myweather-dev-184121-authRole",
             "Region": "us-east-2",
-            "DeploymentBucketName": "amplify-myweather-dev-211540-deployment",
-            "UnauthRoleName": "amplify-myweather-dev-211540-unauthRole",
-            "StackName": "amplify-myweather-dev-211540",
-            "StackId": "arn:aws:cloudformation:us-east-2:519468673194:stack/amplify-myweather-dev-211540/74127450-10df-11eb-8736-02d73f43bc02",
-            "AmplifyAppId": "dbdwgmu1tcr5i"
+            "DeploymentBucketName": "amplify-myweather-dev-184121-deployment",
+            "UnauthRoleName": "amplify-myweather-dev-184121-unauthRole",
+            "StackName": "amplify-myweather-dev-184121",
+            "StackId": "arn:aws:cloudformation:us-east-2:519468673194:stack/amplify-myweather-dev-184121/2f06d330-43ff-11eb-9673-066b2d98ac3a",
+            "AmplifyAppId": "dm2em2om6h4m5"
         },
         "categories": {
             "auth": {
-                "myweather681fb6e9": {}
+                "myweather6e76283a": {}
             }
         }
     }

@@ -1,10 +1,10 @@
 {
-    "AppSyncApiName": "zipcodeAPI",
+    "AppSyncApiName": "zipcodes",
     "DynamoDBBillingMode": "PAY_PER_REQUEST",
     "DynamoDBEnableServerSideEncryption": false,
     "AuthCognitoUserPoolId": {
         "Fn::GetAtt": [
-            "authmyweather681fb6e9",
+            "authmyweather6e76283a",
             "Outputs.UserPoolId"
         ]
     }

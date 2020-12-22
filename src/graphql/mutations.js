@@ -4,7 +4,7 @@
 export const createZipcode = /* GraphQL */ `
   mutation CreateZipcode(
     $input: CreateZipcodeInput!
-    $condition: ModelzipcodeConditionInput
+    $condition: ModelZipcodeConditionInput
   ) {
     createZipcode(input: $input, condition: $condition) {
       id
@@ -17,7 +17,7 @@ export const createZipcode = /* GraphQL */ `
 export const updateZipcode = /* GraphQL */ `
   mutation UpdateZipcode(
     $input: UpdateZipcodeInput!
-    $condition: ModelzipcodeConditionInput
+    $condition: ModelZipcodeConditionInput
   ) {
     updateZipcode(input: $input, condition: $condition) {
       id
@@ -30,7 +30,7 @@ export const updateZipcode = /* GraphQL */ `
 export const deleteZipcode = /* GraphQL */ `
   mutation DeleteZipcode(
     $input: DeleteZipcodeInput!
-    $condition: ModelzipcodeConditionInput
+    $condition: ModelZipcodeConditionInput
   ) {
     deleteZipcode(input: $input, condition: $condition) {
       id

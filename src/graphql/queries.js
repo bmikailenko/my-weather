@@ -13,7 +13,7 @@ export const getZipcode = /* GraphQL */ `
 `;
 export const listZipcodes = /* GraphQL */ `
   query ListZipcodes(
-    $filter: ModelzipcodeFilterInput
+    $filter: ModelZipcodeFilterInput
     $limit: Int
     $nextToken: String
   ) {
