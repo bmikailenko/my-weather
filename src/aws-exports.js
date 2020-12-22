@@ -5,8 +5,8 @@ const awsmobile = {
     "aws_project_region": "us-east-2",
     "aws_cognito_identity_pool_id": "us-east-2:cc8cdca1-e2bb-425d-98cf-2aaeefaea339",
     "aws_cognito_region": "us-east-2",
-    "aws_user_pools_id": "us-east-2_8lMmJGHk8",
-    "aws_user_pools_web_client_id": "33jch8gml1pjtfnftvqqj99oro",
+    "aws_user_pools_id": "us-east-2_U4wslJ0MK",
+    "aws_user_pools_web_client_id": "1or2the9uu9ch71nv3lbu1gg0a",
     "oauth": {},
     "aws_dynamodb_all_tables_region": "us-east-2",
     "aws_dynamodb_table_schemas": [
