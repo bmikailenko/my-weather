@@ -7,9 +7,11 @@ import { createZipcode, updateZipcode } from './graphql/mutations';
 import { getZipcode } from './graphql/queries';
 import Navigation from './Navigation';
 import './App.css';
+import { useHistory } from "react-router-dom";
 
 function Profile() {
   var [zipcode, setZipcode] = useState();  
+  const history = useHistory();
 
   useEffect(() => {
     const getUserZipcode = async () => { 
@@ -49,6 +51,8 @@ function Profile() {
     const newZipcode = e.target.elements.zipcode.value;
     updateUserZipcode(newZipcode);
     setZipcode(e.target.elements.zipcode.value);
+    let path = `/dashboard`; 
+    history.push(path);
   } 
 
   return (

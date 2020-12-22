@@ -32,8 +32,7 @@ function Dashboard() {
       const currentZipcode = await getUserZipcode();
 
       const error = {
-        'name': 'The forecast for ' + currentZipcode + ' is currently unavalible',
-        'icon': '/images/sad.png'
+        'name': 'The forecast for ' + currentZipcode + ' is invalid'
       }
 
       const coordinates = await Zipcodes.lookup(currentZipcode);
